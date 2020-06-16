@@ -1,6 +1,8 @@
 ## Flask
 
-**Version**
+**flask v1.1.2**
+---
+#### Understanding flask by implementing a small web app to learn Russian using flashcards
 ---
 * What is Flask ?
   * It is a web application framework written in Python, which provides developers the ability to develop web apps using Python.
@@ -61,7 +63,7 @@
   * When in place of HTML a JSON data is served to the HTTP server is one of the features that define 'REST API'
   * Use the following Convention in URL for REST APIs :
     * @app.route('/api/<yoururl>')
-  
+
 
 
 
