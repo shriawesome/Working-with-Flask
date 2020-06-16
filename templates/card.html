@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flash Card</title>
+  </head>
+  <body>
+    <h1>English to Russian</h1>
+    <p>
+      English : {{card.question}} <br>
+      Russian : {{card.answer}}
+    </p>
+    <p>
+      <a href="{{url_for('welcome')}}">Home</a>
+      <button>
+        <!-- If we write href="/card/{{index+1}}" it'll be a hard coded link and will not be a good idea hence this
+             url_for() will determine the correct URL accordingly-->
+        <!-- Jinja template for if else block-->
+        {% if index < max_index%}
+          <a href="{{url_for('card_view',index=index+1)}}">Next Card</a>
+        {% else %}
+          <a href="{{url_for('card_view',index=0)}}">Start over</a>
+        {% endif %}
+      </button>
+    </p>
+  </body>
+</html>

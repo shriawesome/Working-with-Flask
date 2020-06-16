@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome!</title>
+  </head>
+  <body>
+    <h1>Welcome to my Page !</h1>
+    <p>
+      You can get the reference to my github page via the below link.
+      <a href="https://github.com/shriawesome">My GitHub</a>
+    </p>
+    <img src='/static/flask_logo.png'>
+    <p>
+      Hi, I'm {{name}} and I'm {{age}} years old.
+    </p>
+      <h2> Flash Cards </h2>
+      <ul>
+        {% for card in cards %}
+          <li>
+            <a href="{{url_for('card_view',index=loop.index0)}}">{{card.question}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+  </body>
+</html>

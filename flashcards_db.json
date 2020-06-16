@@ -1,0 +1,18 @@
+[
+  {
+    "question": "Hello",
+    "answer":"Привет"
+  },
+  {
+    "question":"Good Morning",
+    "answer":"Доброе утро"
+  },
+  {
+    "question":"Goodbye",
+    "answer":"Прощай"
+  },
+  {
+    "question":"I Love You",
+    "answer":"Я люблю вас"
+  }
+]
