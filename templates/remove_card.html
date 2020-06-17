@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Remove card</title>
+ </head>
+ <body>
+   <h2>Remove Card</h2>
+   <p>English : {{card.question}}</p>
+   <p>Russian : {{card.answer}}</p>
+   <form method="post">
+     <button type="submit" name="button">Yes</button>
+     <a href="{{url_for('welcome')}}">No</a>
+     <!-- By default if the method is not post then all the data
+    via the Create button is edited in the URL in key:value pairs-->
+   </form>
+ </body>
+</html>

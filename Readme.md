@@ -56,6 +56,8 @@
     * Calling templates via View f'n
     * For all these we'll use jinja variables, enclosed in {{var_name}} in the HTML file and can be used anywhere.
     * All the templates are present in `templates/` [Don't forget to add 's' else it won't work]
+    * `Template inheritance` is a way in which a base.html file can be used to apply a common css style across all other HTML places.
+
   * ![General Architecture for MTV](/images/architecture_MTV.png)
 
 * Serving REST API's

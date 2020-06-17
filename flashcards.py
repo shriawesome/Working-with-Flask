@@ -1,7 +1,8 @@
-from flask import Flask,render_template,abort,jsonify
+from flask import (Flask,render_template,abort,jsonify, request,
+                    redirect,url_for)
 
 #import datetime as dt
-from model import db
+from model import db,save_db
 
 # Flask constructor that creates a global Flask application object\
 # __name__ contains the name of the present module
@@ -60,3 +61,35 @@ def api_card_view(index):
         return db[index]
     except IndexError:
         abort(404)
+
+# Add Card via users
+# By default views only accept the GET request and not the POST requested, hence to do that
+# we need to use the 'methods' parameter.
+@app.route('/add_card/',methods=['GET','POST'])
+def add_card():
+    if request.method == 'POST':
+        # Process the data and add it to the database.
+        card={'question':request.form['question'],
+                'answer':request.form['answer']}
+        db.append(card)
+        save_db()
+        return redirect(url_for('card_view',index=len(db)-1))
+
+    else:
+        return render_template('add_card.html')
+
+# Remove a flashcard.
+@app.route('/remove_card/<int:index>',methods=['GET','POST'])
+def remove_card(index):
+    try:
+        if request.method=='POST':
+            # Delete the entry from the db
+            db.pop(index)
+            save_db()
+            return redirect(url_for('welcome'))
+    except IndexError:
+        abort(404)
+
+
+    else:
+        return render_template('remove_card.html',card=db[index])

@@ -1,18 +1,1 @@
-[
-  {
-    "question": "Hello",
-    "answer":"Привет"
-  },
-  {
-    "question":"Good Morning",
-    "answer":"Доброе утро"
-  },
-  {
-    "question":"Goodbye",
-    "answer":"Прощай"
-  },
-  {
-    "question":"I Love You",
-    "answer":"Я люблю вас"
-  }
-]
+[{"question": "Hello", "answer": "\u041f\u0440\u0438\u0432\u0435\u0442"}, {"question": "Good Morning", "answer": "\u0414\u043e\u0431\u0440\u043e\u0435 \u0443\u0442\u0440\u043e"}, {"question": "Goodbye", "answer": "\u041f\u0440\u043e\u0449\u0430\u0439"}, {"question": "I Love You", "answer": "\u042f \u043b\u044e\u0431\u043b\u044e \u0432\u0430\u0441"}]

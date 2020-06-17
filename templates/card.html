@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--link rel="stylesheet" href="/static/style.css", not a good soln as we are adding a hardcode link-->
+    <link rel="stylesheet" href="{{url_for ('static',filename='style.css')}}">
     <title>Flash Card</title>
   </head>
   <body>
@@ -22,5 +24,6 @@
         {% endif %}
       </button>
     </p>
+    <a href="{{url_for('remove_card',index=index)}}">Remove Card</a>
   </body>
 </html>
